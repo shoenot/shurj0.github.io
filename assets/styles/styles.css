@@ -84,7 +84,7 @@
         
         .nav-links > div {
             text-align: right;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
         } 
 
         .nav {
@@ -97,7 +97,7 @@
             margin-top: 4rem;
         }
         .nav-spacer {
-            max-width: 15vw;
+            max-width: 10vw;
         }
     }
 
@@ -168,6 +168,18 @@
             min-width: 570px;
             max-width: 900px;
         }
+        #data-table {
+            display:flex;
+            width: 100vw;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+        }
     }
 
     @media (min-width: 1200px) {
@@ -175,19 +187,20 @@
             max-width: unset;
         }
         .content-body {
-            min-width: 900px;
+            min-width: 800px;
         }
     }
 
     @media (min-width: 1400px) {
         .content-body {
-            min-width: 1200px;
+            min-width: 950px;
         }
     }
 
     #post {
         max-width: 90vw;
     }
+
 
     /* Footer layout */
     footer {
