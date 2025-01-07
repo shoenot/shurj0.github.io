@@ -1,0 +1,338 @@
+:root {
+    --background-color:#F4D1AE;
+    --text-color:#011627; 
+    --link-color:#441752;
+    --title-color:#441752;
+    --hover-color:#F05941;
+    --date-color:rgba(1, 22, 39, 0.7);
+    --divider-color:rgba(165, 148, 129, 1);
+    --backdrop-color:rgba(21, 19, 15, 0.5);
+}
+
+@layer layout {
+    body {
+        display: grid;
+        grid-template-rows: 1fr auto;
+        min-height: 100vh;
+        margin: 0;
+        width: 100vw;
+    }
+
+    /* Navigation bar layout */
+
+    .nav {
+        display: flex;
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+        width: 100vw;
+    }
+
+    .nav > div {
+        flex: 1;
+    }
+    .nav-spacer {
+        max-width: 0vw;
+    }
+
+    .nav-body > div {
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .nav-title {
+        font-size: 1.75rem;
+        font-weight: 500;
+        padding-bottom: 0.5rem;
+    }
+
+    .nav-links > div {
+        text-align: center;
+    }
+
+    .nav-links {
+        display: flex;
+        padding-bottom: 0.5rem;
+    }
+
+    .nav-links > div {
+        flex: 1;
+    }
+
+    @media (min-width: 576px) {
+        .nav {
+            margin-top: 4rem;
+        }
+
+        .nav-body {
+            display: flex;
+        }
+
+        .nav-spacer {
+            max-width: 5vw;
+        }
+
+        .nav-body > div {
+            flex: 1;
+            text-align: left;
+            margin-top: 0;
+        }
+
+        .nav-title {
+            text-align: left;
+            font-size: 1.5rem;
+        }
+        
+        .nav-links > div {
+            text-align: right;
+            font-size: 1.5rem;
+        } 
+
+        .nav {
+            font-weight: 500;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .nav {
+            margin-top: 4rem;
+        }
+        .nav-spacer {
+            max-width: 15vw;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .nav {
+            margin-top: 4rem;
+        }
+
+        .nav-title {
+            font-size: 1.75rem;
+        }
+        .nav-links > div {
+            font-size: 1.75rem;
+        } 
+        .nav-spacer {
+            max-width: 12vw;
+            min-width: 5vw;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .nav-spacer {
+            max-width: unset;
+        }
+        .nav-body {
+            min-width: 850px;
+        }
+    }
+
+    @media (min-width: 1400px) {
+        .nav-body {
+            min-width: 950px;
+        }
+    }
+
+    /* Content layout */
+
+    .content {
+        display: flex;
+    }
+
+    .content > div {
+        flex: 1;
+    }
+
+    .content-spacer {
+        max-width: 10vw;
+    }
+
+    @media (min-width: 576px) {
+        .content-spacer {
+            max-width: 10vw;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .content-spacer {
+            max-width: 15vw;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .content-spacer {
+            max-width: 15vw;
+            min-width: 10vw;
+        }
+        .content-body {
+            min-width: 570px;
+            max-width: 900px;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .content-spacer {
+            max-width: unset;
+        }
+        .content-body {
+            min-width: 900px;
+        }
+    }
+
+    @media (min-width: 1400px) {
+        .content-body {
+            min-width: 1200px;
+        }
+    }
+
+    #post {
+        max-width: 90vw;
+    }
+
+    /* Footer layout */
+    footer {
+        padding-bottom: 16px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        margin-top: auto;
+        margin-bottom: 0;
+
+    }
+}
+
+@layer theme {
+    body {
+        background-color: var(--background-color);
+        /* background-image: url('/assets/backgrounds/topcorner.svg'), url('/assets/backgrounds/botcorner.svg'); */
+        background-image: url('/assets/backgrounds/bgimg.svg');
+        background-repeat: no-repeat, no-repeat;
+        /* background-position: right top, left bottom; */
+        /* background-size: 100%; */
+        background-attachment: fixed;
+        background-position: center center;
+        background-size: cover; 
+        font-family: "Fira Code", sans-serif;
+        font-weight: 400;
+        font-optical-sizing: auto;
+        font-style: normal;
+        color: var(--text-color); 
+    }
+
+    .nav {
+    }
+
+    .nav-title > a {
+        color: var(--title-color);
+    }
+
+    a {
+        color: var(--link-color);
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: var(--hover-color);
+        text-decoration: none;
+    }
+
+    strong {
+        font-weight: 600;
+    }
+
+    #post {
+        margin-top: 20px;
+        margin-bottom: 0px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 5px;
+        /* border-radius: 10px; */
+        -webkit-backdrop-filter: blur(10px);
+       /* backdrop-filter: blur(10px);*/
+    }
+
+    #post-header {
+        margin-bottom: 0px;
+        color: var(--title-color);
+        font-size: 1.5rem;
+    }
+    
+    #post-date {
+        font-size: 0.85rem;
+        font-style: italic;
+        color: var(--date-color);
+        padding-top: 5px;
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+    
+    #post-divider {
+        color: var(--divider-color);
+        opacity: 0.25;
+        margin: 1rem 0;
+    }
+    .contact-page {
+        margin-top: 50px;
+        text-align: center;
+    }
+    
+    #contact-list {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #contact-header {
+        font-size: 1.5rem;
+        color: var(--title-color);
+    }
+    
+    tr {
+        font-size: 1rem;
+    }
+    
+    th {
+        padding-right: 50px;
+        padding-top: 10px;
+        text-align: left;
+    }
+    td {
+        padding-top: 10px;
+        text-align: right;
+    }
+    #post-listing-container {
+        margin-top: 50px;
+    }
+    
+    #post-listing {
+        margin-top: 10px;
+    }
+    
+    #item-start {
+        margin: auto;
+    }
+    
+    #post-listing-title {
+        color: var(--title-color);
+        margin: 0px;
+        text-align: left;
+        font-size: 1.25rem;
+    }
+    
+    #post-listing-date {
+        color: var(--date-color);
+        font-style: italic;
+        font-size: 0.75rem;
+    }
+    
+    .img-fluid {
+        margin: 0 auto;
+        display: block;
+    }
+
+    #footer-custom {
+        color: var(--text-color);
+        padding: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
