@@ -1,9 +1,9 @@
 :root {
-    --background-color:#F4D1AE;
-    --text-color:#011627; 
-    --link-color:#441752;
-    --title-color:#441752;
-    --hover-color:#F05941;
+    --background-color:#0A014F;
+    --text-color:#f6caca; 
+    --link-color:#cd9fcc;
+    --title-color:#cd9fcc;
+    --hover-color:#fae8eb;
     --date-color:rgba(1, 22, 39, 0.7);
     --divider-color:rgba(165, 148, 129, 1);
     --backdrop-color:rgba(21, 19, 15, 0.5);
@@ -218,7 +218,7 @@
     body {
         background-color: var(--background-color);
         /* background-image: url('/assets/backgrounds/topcorner.svg'), url('/assets/backgrounds/botcorner.svg'); */
-        background-image: url('/assets/backgrounds/bgimg.svg');
+        /*background-image: url('/assets/backgrounds/bgimg.svg'); */
         background-repeat: no-repeat, no-repeat;
         /* background-position: right top, left bottom; */
         /* background-size: 100%; */
